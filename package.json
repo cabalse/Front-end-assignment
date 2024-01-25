@@ -1,0 +1,18 @@
+{
+  "name": "front-end-assignment",
+  "version": "1.0.0",
+  "description": "Front-end Assignment",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm --prefix ./backend run dev\" \"npm --prefix ./frontend run dev\"",
+    "install": "run-p install:*",
+    "install:backend": "npm --prefix ./backend install",
+    "install:frontend": "npm --prefix ./frontend install"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "npm-run-all": "^4.1.5"
+  }
+}
