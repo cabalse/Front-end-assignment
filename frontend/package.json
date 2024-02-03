@@ -1,13 +1,38 @@
 {
-  "name": "frontend",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "reat-vite-boilerplate",
+  "private": true,
+  "version": "0.2.0",
+  "type": "module",
   "scripts": {
-    "dev": "node index.js",
-    "install": "npm i",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
   },
-  "author": "",
-  "license": "ISC"
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "@vitejs/plugin-react-swc": "^3.0.0",
+    "autoprefixer": "^10.4.17",
+    "eslint": "^8.37.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-config-react-app": "^7.0.1",
+    "meow": "^9.0.0",
+    "optionator": "^0.9.1",
+    "postcss": "^8.4.33",
+    "prettier": "^3.2.4",
+    "sass": "^1.60.0",
+    "stylelint": "^15.3.0",
+    "stylelint-config-standard": "^31.0.0",
+    "stylelint-config-standard-scss": "^7.0.1",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^4.9.3",
+    "vite": "^4.2.0",
+    "vite-plugin-checker": "^0.6.4",
+    "vite-plugin-eslint": "^1.8.1",
+    "vite-plugin-stylelint": "^4.3.0"
+  }
 }
