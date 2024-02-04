@@ -1,13 +1,20 @@
+import Rating from '../../models/rating';
 import AverageRatingPart from '../atoms/averageratingpart';
 
-type Props = { className?: string };
+type Props = { ratings: Rating[]; className?: string };
 
-const AverageRatingParts = ({ className = '' }: Props) => {
+const AverageRatingParts = ({ ratings, className = '' }: Props) => {
   return (
     <div className="flex flex-row space-x-2 mt-3">
-      <AverageRatingPart name={'IMDB'} rating={76} />
-      <AverageRatingPart name={'Rotten Tomatoes'} rating={76} />
-      <AverageRatingPart name={'Metacritic'} rating={76} />
+      {ratings
+        ? ratings.map((rating) => (
+            <AverageRatingPart
+              key={rating.name}
+              name={rating.name}
+              rating={rating.rating}
+            />
+          ))
+        : null}
     </div>
   );
 };

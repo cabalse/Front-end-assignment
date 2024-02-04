@@ -1,4 +1,4 @@
-import React, { useState, createContext, ReactNode } from 'react';
+import { useState, createContext, ReactNode } from 'react';
 import Film from '../models/film';
 import FilmsProvider from '../dataprovider/filmsprovider';
 

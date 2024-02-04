@@ -81,6 +81,14 @@ const films = {
       created: '2014-12-10T14:23:31.880000Z',
       edited: '2014-12-20T19:49:45.256000Z',
       url: 'https://swapi.dev/api/films/1/',
+      rating: 9,
+      ratings: [
+        { name: 'IMDB', rating: 8 },
+        { name: 'Rotten Tomatoes', rating: 9 },
+        { name: 'Metacritic', rating: 10 },
+      ],
+      image:
+        'https://m.media-amazon.com/images/M/MV5BOTA5NjhiOTAtZWM0ZC00MWNhLThiMzEtZDFkOTk2OTU1ZDJkXkEyXkFqcGdeQXVyMTA4NDI1NTQx._V1_SX300.jpg',
     },
     {
       title: 'The Empire Strikes Back',
@@ -161,6 +169,12 @@ const films = {
       created: '2014-12-12T11:26:24.656000Z',
       edited: '2014-12-15T13:07:53.386000Z',
       url: 'https://swapi.dev/api/films/2/',
+      rating: 10,
+      ratings: [
+        { name: 'IMDB', rating: 1 },
+        { name: 'Rotten Tomatoes', rating: 2 },
+        { name: 'Metacritic', rating: 3 },
+      ],
     },
     {
       title: 'Return of the Jedi',
@@ -254,6 +268,9 @@ const films = {
       created: '2014-12-18T10:39:33.255000Z',
       edited: '2014-12-20T09:48:37.462000Z',
       url: 'https://swapi.dev/api/films/3/',
+      rating: 8,
+      image:
+        'https://m.media-amazon.com/images/M/MV5BOWZlMjFiYzgtMTUzNC00Y2IzLTk1NTMtZmNhMTczNTk0ODk1XkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg',
     },
   ],
 };

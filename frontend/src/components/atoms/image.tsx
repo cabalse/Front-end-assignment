@@ -1,12 +1,12 @@
-import ANewHope from '../../assets/a-new-hope.jpg';
+type Props = { url: string; alt: string; type?: string };
 
-type Props = { type?: string };
+const Image = ({ url, alt, type = 'dirty' }: Props) => {
+  if (!url) return null;
 
-const Image = ({ type = 'dirty' }: Props) => {
   return (
     <img
-      src={ANewHope}
-      alt="A New Hope"
+      src={url}
+      alt={alt}
       className={type === 'dirty' ? 'mb-2 md:mb-0 mr-0 md:mr-2 min-w-72' : ''}
     />
   );

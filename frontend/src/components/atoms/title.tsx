@@ -1,11 +1,11 @@
-type Props = { type?: string };
+type Props = { title: string; type?: string };
 
-const Title = ({ type = 'normal' }: Props) => {
+const Title = ({ title, type = 'normal' }: Props) => {
   return (
     <div
       className={type === 'large' ? 'font-medium text-3xl' : 'grow font-medium'}
     >
-      Episode IV - A New Hope
+      {title}
     </div>
   );
 };

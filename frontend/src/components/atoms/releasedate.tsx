@@ -1,7 +1,7 @@
-type Props = { className?: string };
+type Props = { date: string; className?: string };
 
-const ReleaseDate = ({ className = '' }: Props) => {
-  return <div className="">1977-05-25</div>;
+const ReleaseDate = ({ date, className = '' }: Props) => {
+  return <div className="">{date}</div>;
 };
 
 export default ReleaseDate;

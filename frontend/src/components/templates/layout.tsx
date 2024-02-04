@@ -4,7 +4,6 @@ type Props = {
   header: React.ReactNode;
   mainMobile: React.ReactNode;
   mainDesktop: React.ReactNode;
-  breakpoint: number;
 };
 
 const Layout = ({ header, mainMobile, mainDesktop }: Props) => {

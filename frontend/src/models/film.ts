@@ -1,3 +1,5 @@
+import Rating from './rating';
+
 type Film = {
   title: string;
   episode_id: number;
@@ -13,6 +15,9 @@ type Film = {
   created: string;
   edited: string;
   url: string;
+  rating: number;
+  ratings: Rating[];
+  image: string;
 };
 
 export default Film;

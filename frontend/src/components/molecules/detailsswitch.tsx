@@ -1,11 +1,27 @@
+import { useState, useEffect } from 'react';
+
 import { ChevronDownIcon } from '@heroicons/react/20/solid';
 
-type Props = { className?: string };
+type Props = {
+  onClick: () => void;
+  value: boolean;
+  className?: string;
+};
 
-const DetailsSwitch = ({ className = '' }: Props) => {
+const DetailsSwitch = ({ onClick, value, className = '' }: Props) => {
+  const [showDetails, setShowDetails] = useState<boolean>(value);
+
+  useEffect(() => {
+    setShowDetails(value);
+  }, [value]);
+
   return (
-    <div className="flex flex-row cursor-pointer">
-      <ChevronDownIcon className="w-5 h-5 mr-2" />
+    <div className="flex flex-row cursor-pointer" onClick={() => onClick()}>
+      {showDetails ? (
+        <ChevronDownIcon className="w-5 h-5 mr-2" />
+      ) : (
+        <ChevronDownIcon className="w-5 h-5 mr-2" />
+      )}
       <p>Details ...</p>
     </div>
   );
