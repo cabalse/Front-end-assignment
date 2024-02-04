@@ -17,10 +17,10 @@ describe('DataContextProvider', () => {
         dataContext.getData(URL);
       }, [dataContext]);
 
-      if (dataContext.data.length === 0) {
+      if (dataContext.getMovies().length === 0) {
         return null;
       } else {
-        return <p>Number of Movies: {dataContext.data.length}</p>;
+        return <p>Number of Movies: {dataContext.getMovies().length}</p>;
       }
     };
 
@@ -44,7 +44,7 @@ describe('DataContextProvider', () => {
         dataContext.selectMovie(4);
       }, [dataContext]);
 
-      if (dataContext.data.length === 0) {
+      if (dataContext.getMovies().length === 0) {
         return null;
       } else {
         return (

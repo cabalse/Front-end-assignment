@@ -27,7 +27,7 @@ const FilmList = () => {
 
   return (
     <>
-      {dataContext.data.map((film: Film) => (
+      {dataContext.getMovies().map((film: Film) => (
         <div
           key={film.episode_id}
           onClick={() => handleClick(film.episode_id)}

@@ -6,6 +6,7 @@ type Props = {
 
 const SearchInput = ({ onChange }: Props) => {
   const [inputValue, setInputValue] = useState('');
+
   return (
     <input
       type="text"

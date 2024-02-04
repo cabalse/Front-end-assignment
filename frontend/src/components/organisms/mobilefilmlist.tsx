@@ -12,7 +12,7 @@ const MobileFilmList = () => {
   const dataContext = useContext(DataContext);
   return (
     <>
-      {dataContext.data.map((film: Film) => (
+      {dataContext.getMovies().map((film: Film) => (
         <section
           key={film.episode_id}
           className="flex flex-col mx-4 my-1 border border-slate-200 rounded bg-slate-50 p-2"
