@@ -1,6 +1,6 @@
-type Props = {};
+type Props = { className?: string };
 
-const ReleaseDate = ({}: Props) => {
+const ReleaseDate = ({ className = '' }: Props) => {
   return <div className="">1977-05-25</div>;
 };
 

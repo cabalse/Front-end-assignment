@@ -1,9 +1,9 @@
 import Image from '../atoms/image';
 import PlotText from '../atoms/plottext';
 
-type Props = {};
+type Props = { className?: string };
 
-const DetailContent = ({}: Props) => {
+const DetailContent = ({ className = '' }: Props) => {
   return (
     <div className="mt-2 text-justify flex flex-col md:flex-row ">
       <div className="flex justify-center">

@@ -1,9 +1,9 @@
 import DetailContent from '../molecules/detailcontent';
 import DetailsSwitch from '../molecules/detailsswitch';
 
-type Props = {};
+type Props = { className?: string };
 
-const Details = ({}: Props) => {
+const Details = ({ className = '' }: Props) => {
   return (
     <div className="flex flex-col">
       <DetailsSwitch />

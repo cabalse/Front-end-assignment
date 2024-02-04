@@ -1,5 +1,3 @@
-import { Children } from 'react';
-
 type Props = {
   onClick: () => void;
   children: React.ReactNode;

@@ -10,8 +10,6 @@ import ReleaseDate from '../atoms/releasedate';
 import Title from '../atoms/title';
 import Episode from '../atoms/episode';
 import Image from '../atoms/image';
-import DetailsSwitch from '../molecules/detailsswitch';
-import DetailContent from '../molecules/detailcontent';
 import Details from '../organisms/details';
 import AverageRatingParts from '../molecules/averageratingparts';
 

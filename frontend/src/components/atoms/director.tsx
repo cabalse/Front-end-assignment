@@ -1,6 +1,8 @@
-type Props = {};
+type Props = {
+  className?: string;
+};
 
-const Director = ({}: Props) => {
+const Director = ({ className = '' }: Props) => {
   return <div className="pt-2">Directed by: George Lucas</div>;
 };
 

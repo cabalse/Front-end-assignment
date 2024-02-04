@@ -1,8 +1,8 @@
 import AverageRatingPart from '../atoms/averageratingpart';
 
-type Props = {};
+type Props = { className?: string };
 
-const AverageRatingParts = ({}: Props) => {
+const AverageRatingParts = ({ className = '' }: Props) => {
   return (
     <div className="flex flex-row space-x-2 mt-3">
       <AverageRatingPart name={'IMDB'} rating={76} />

@@ -4,7 +4,7 @@ type Props = {
   className?: string;
 };
 
-const StarRating = ({}: Props) => {
+const StarRating = ({ className = '' }: Props) => {
   return (
     <div className="flex flex-row self-center">
       <StarIcon className="w-4 h-4" />
