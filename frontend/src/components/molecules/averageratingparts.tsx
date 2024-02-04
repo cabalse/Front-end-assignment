@@ -5,7 +5,7 @@ type Props = { ratings: Rating[]; className?: string };
 
 const AverageRatingParts = ({ ratings, className = '' }: Props) => {
   return (
-    <div className="flex flex-row space-x-2 mt-3">
+    <div className="flex md:flex-row flex-col md:space-x-2 mt-3">
       {ratings
         ? ratings.map((rating) => (
             <AverageRatingPart

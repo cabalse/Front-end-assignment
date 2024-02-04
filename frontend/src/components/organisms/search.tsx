@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import SearchInput from '../molecules/searchinput';
 import { MagnifyingGlassIcon } from '@heroicons/react/20/solid';
 import { DataContext } from '../../context/datacontext';
@@ -7,10 +7,8 @@ type Props = { className?: string };
 
 const Search = ({ className = '' }: Props) => {
   const dataContext = useContext(DataContext);
-  const [inputValue, setInputValue] = useState<string>('');
 
   const onChange = (value: string) => {
-    setInputValue(value);
     dataContext.setFilter(value);
   };
 

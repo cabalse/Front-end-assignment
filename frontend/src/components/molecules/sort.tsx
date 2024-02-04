@@ -1,9 +1,9 @@
 import Button from '../atoms/button';
 
-type Props = { className?: string };
+type Props = { onClick: () => void };
 
-const Sort = ({ className = '' }: Props) => {
-  return <Button onClick={() => null}>Sort By...</Button>;
+const Sort = ({ onClick }: Props) => {
+  return <Button onClick={onClick}>Sort By...</Button>;
 };
 
 export default Sort;
