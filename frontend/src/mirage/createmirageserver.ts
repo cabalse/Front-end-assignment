@@ -6,7 +6,7 @@ const createMirageServer = () => {
   createServer({
     environment: 'test',
     routes() {
-      this.get('/api/films', () => films);
+      this.get('/api/getMovies', () => films);
     },
   });
 };

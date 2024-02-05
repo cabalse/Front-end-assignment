@@ -1,6 +1,6 @@
 type Rating = {
-  name: string;
-  rating: number;
+  source: string;
+  value: string;
 };
 
 export default Rating;

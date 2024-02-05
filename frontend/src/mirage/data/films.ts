@@ -83,9 +83,18 @@ const films = {
       url: 'https://swapi.dev/api/films/1/',
       rating: 9,
       ratings: [
-        { name: 'IMDB', rating: 8 },
-        { name: 'Rotten Tomatoes', rating: 9 },
-        { name: 'Metacritic', rating: 10 },
+        {
+          source: 'Internet Movie Database',
+          value: '1.6/10',
+        },
+        {
+          source: 'Rotten Tomatoes',
+          value: '3%',
+        },
+        {
+          source: 'Metacritic',
+          value: '30/100',
+        },
       ],
       image:
         'https://m.media-amazon.com/images/M/MV5BOTA5NjhiOTAtZWM0ZC00MWNhLThiMzEtZDFkOTk2OTU1ZDJkXkEyXkFqcGdeQXVyMTA4NDI1NTQx._V1_SX300.jpg',
@@ -171,9 +180,18 @@ const films = {
       url: 'https://swapi.dev/api/films/2/',
       rating: 10,
       ratings: [
-        { name: 'IMDB', rating: 1 },
-        { name: 'Rotten Tomatoes', rating: 2 },
-        { name: 'Metacritic', rating: 3 },
+        {
+          source: 'Internet Movie Database',
+          value: '8.6/10',
+        },
+        {
+          source: 'Rotten Tomatoes',
+          value: '93%',
+        },
+        {
+          source: 'Metacritic',
+          value: '90/100',
+        },
       ],
     },
     {
