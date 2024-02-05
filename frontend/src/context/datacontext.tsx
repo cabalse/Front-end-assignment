@@ -17,6 +17,7 @@ type DataContextType = {
   getSelectedMovie: () => Film | undefined;
   setFilter: (filter: string) => void;
   setSortOrder: (order: string, orderType: SortOrderType) => void;
+  setOnlyTrueSW: (onlyTrueSW: boolean) => void;
   resetSortOrder: VoidFunction;
 };
 
@@ -28,6 +29,7 @@ const defaultContext: DataContextType = {
   getSelectedMovie: () => undefined,
   setFilter: (filter: string) => null,
   setSortOrder: (order: string, orderType: SortOrderType) => null,
+  setOnlyTrueSW: (onlyTrueSW: boolean) => null,
   resetSortOrder: () => null,
 };
 
@@ -42,6 +44,7 @@ const DataContextProvider = ({ children }: Props) => {
     byEpisode: null,
     byTitle: null,
   });
+  const [onlyTrueSW, setOnlyTrueSW] = useState<boolean>(true);
 
   const getData = (url: string) => {
     FilmsProvider(url).then((data: Film[]) => {
@@ -114,6 +117,15 @@ const DataContextProvider = ({ children }: Props) => {
       });
     }
 
+    if (onlyTrueSW) {
+      ret = ret.filter(
+        (film: Film) =>
+          film.episode_id === 4 ||
+          film.episode_id === 5 ||
+          film.episode_id === 6
+      );
+    }
+
     return ret;
   };
 
@@ -126,6 +138,7 @@ const DataContextProvider = ({ children }: Props) => {
     setFilter,
     setSortOrder,
     resetSortOrder,
+    setOnlyTrueSW,
   };
 
   return <DataContext.Provider value={value}>{children}</DataContext.Provider>;

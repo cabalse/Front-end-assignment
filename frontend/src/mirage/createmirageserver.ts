@@ -2,9 +2,9 @@ import { createServer } from 'miragejs';
 
 import films from './data/films';
 
-const createMirageServer = () => {
+const createMirageServer = ({ environment = 'test' }) => {
   createServer({
-    environment: 'test',
+    environment,
     routes() {
       this.get('/api/getMovies', () => films);
     },

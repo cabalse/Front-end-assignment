@@ -41,13 +41,21 @@ const movieService = async () => {
       const currMovie = result.results[i];
       const year = moment(currMovie.release_date).format('YYYY');
       const omdb = await omdbService(currMovie.title.toLowerCase(), year);
-      const movie = {
+
+      const ratings = [];
+      for (let j = 0; j < omdb.Ratings.length; j++) {
+        ratings.push({
+          source: omdb.Ratings[j].Source,
+          value: omdb.Ratings[j].Value,
+        });
+      }
+
+      ret.push({
         ...result.results[i],
         image: omdb.Poster,
         rating: calcAverageRating(omdb.Ratings),
-        ratings: omdb.Ratings,
-      };
-      ret.push(movie);
+        ratings: ratings,
+      });
     }
 
     return ret;

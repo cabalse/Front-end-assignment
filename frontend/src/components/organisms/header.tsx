@@ -41,6 +41,7 @@ const sortOptions = [
 const Header = () => {
   const dataContext = useContext(DataContext);
   const [selected, setSelected] = useState<number>(0);
+  const [trueSWSelected, setTrueSWSelected] = useState(true);
   const [sortPanelClasses, setSortPanelClasses] = useState<string>('hidden');
 
   const handleSortClick = () => {
@@ -83,6 +84,17 @@ const Header = () => {
             }}
           />
         ))}
+        <Checkbox
+          key={'trueSW'}
+          label={'True SW Only'}
+          selected={trueSWSelected}
+          onCheckChanged={(selected) => {
+            setTrueSWSelected((prevValue) => {
+              dataContext.setOnlyTrueSW(!prevValue);
+              return !prevValue;
+            });
+          }}
+        />
       </div>
     </div>
   );

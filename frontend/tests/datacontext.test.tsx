@@ -4,11 +4,11 @@ import { DataContext, DataContextProvider } from '../src/context/datacontext';
 import createMirageServer from '../src/mirage/createmirageserver';
 import '@testing-library/jest-dom';
 
-const URL = 'api/films';
+const URL = 'api/getMovies';
 
 describe('DataContextProvider', () => {
   test('Should display that three movies was loaded when context was initiated and getData called', async () => {
-    createMirageServer();
+    createMirageServer({ environment: 'test' });
 
     const TestingComponent = () => {
       const dataContext = useContext(DataContext);
@@ -34,7 +34,7 @@ describe('DataContextProvider', () => {
   });
 
   test('Should display the title of the selected movie when that specific movie is selected', async () => {
-    createMirageServer();
+    createMirageServer({ environment: 'test' });
 
     const TestingComponent = () => {
       const dataContext = useContext(DataContext);

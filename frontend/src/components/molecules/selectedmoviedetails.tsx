@@ -13,7 +13,14 @@ const SelectedMovieDetails = () => {
   const selectedMovie = dataContext.getSelectedMovie();
 
   if (!selectedMovie) {
-    return null;
+    return (
+      <div className="flex flex-col p-4">
+        <p className="text-2xl font-bold">Star Wars Movie Application</p>
+        <div>
+          Please select one of the movies on the left side to see the details!
+        </div>
+      </div>
+    );
   } else {
     return (
       <section className="basis-1/2 flex flex-col p-4">

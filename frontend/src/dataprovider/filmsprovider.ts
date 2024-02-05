@@ -4,8 +4,8 @@ import request from './request';
 
 const FilmsProvider = (url: string): Promise<Film[]> => {
   const films = async () => {
-    const response = await request<Result>(url);
-    return response.results;
+    const response = await request<Film[]>(url);
+    return response;
   };
   return films();
 };
