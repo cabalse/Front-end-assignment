@@ -19,6 +19,7 @@ type DataContextType = {
   setSortOrder: (order: string, orderType: SortOrderType) => void;
   setOnlyTrueSW: (onlyTrueSW: boolean) => void;
   resetSortOrder: VoidFunction;
+  isLoading: boolean;
 };
 
 const defaultContext: DataContextType = {
@@ -31,6 +32,7 @@ const defaultContext: DataContextType = {
   setSortOrder: (order: string, orderType: SortOrderType) => null,
   setOnlyTrueSW: (onlyTrueSW: boolean) => null,
   resetSortOrder: () => null,
+  isLoading: false,
 };
 
 const DataContext = createContext<DataContextType>(defaultContext);
@@ -45,11 +47,17 @@ const DataContextProvider = ({ children }: Props) => {
     byTitle: null,
   });
   const [onlyTrueSW, setOnlyTrueSW] = useState<boolean>(true);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const getData = (url: string) => {
-    FilmsProvider(url).then((data: Film[]) => {
-      setData(data);
-    });
+    setIsLoading(true);
+    FilmsProvider(url)
+      .then((data: Film[]) => {
+        setData(data);
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
   };
 
   const selectMovie = (id: number | null) => {
@@ -139,6 +147,7 @@ const DataContextProvider = ({ children }: Props) => {
     setSortOrder,
     resetSortOrder,
     setOnlyTrueSW,
+    isLoading,
   };
 
   return <DataContext.Provider value={value}>{children}</DataContext.Provider>;
