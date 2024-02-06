@@ -109,7 +109,7 @@ describe('DataContextProvider', () => {
     server.shutdown();
   });
 
-  test('Should display one movie that fullfills the set filter string', async () => {
+  test('Should display the movies that fullfills the set filter string', async () => {
     const server = createMirageServer({ environment: 'test' });
 
     const TestingComponent = () => {
