@@ -5,10 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": " concurrently \"npm --prefix ./backend run dev\" \"npm --prefix ./frontend run dev\" ",
-    "prod": " concurrently \"npm --prefix ./backend run dev\" \"npm --prefix ./frontend run prod\" ",
-    "install": " run-p install:* ",
-    "install:backend": " npm --prefix ./backend install ",
-    "install:frontend": " npm --prefix ./frontend install "
+    "prod": " concurrently \"npm --prefix ./backend run dev\" \"npm --prefix ./frontend run prod\" "
   },
   "author": "",
   "license": "ISC",

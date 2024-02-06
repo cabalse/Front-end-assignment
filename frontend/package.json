@@ -1,5 +1,5 @@
 {
-  "name": "reat-vite-boilerplate",
+  "name": "front-end-assignment",
   "private": true,
   "version": "0.2.0",
   "type": "module",
@@ -8,8 +8,7 @@
     "prod": "vite --mode production",
     "build": "vite build",
     "preview": "vite preview",
-    "test": "jest",
-    "install": "npm install"
+    "test": "jest"
   },
   "dependencies": {
     "@heroicons/react": "^2.1.1",

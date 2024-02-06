@@ -1,6 +1,6 @@
 settings = {
   port: 3131,
-  omdbApiKey: 'INSERT-API-KEY-HERE',
+  omdbApiKey: 'b9a5e69d',
 };
 
 module.exports = settings;
