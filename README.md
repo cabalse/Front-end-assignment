@@ -51,12 +51,11 @@ The UI works, but there are some areas for improvement:
   <li>Responsiveness - The default Breakpoints provided by Tailwind are used with one additional Breakpoint specified. At some points, this gives an awkward appearance. I want to use Fluid instead (if this lines up with customer demand) or go the other way and lock the design onto precise breakpoints (if time and money are an issue) since an app like this probably doesn't need perfect design at every screen width possible.</li>
   <li>Order panel - This panel, with its not-so-good-looking checkboxes, should get a better design.</li>
   <li>Images - No consideration is taken on handling images. Since they are linked to external sources, they might be unavailable, break the design, or be a security risk. It also drives traffic to another server that might be unwanted and unnecessary. It's an uncontrolled dependency. This should be addressed.</li>
-  <li>Load Spinner - A indication when the application is fetching is required.</li>
 </ul>
 
 ### Tests
 
-Currently, only two tests are implemented for testing the DataContext component and its capability to fetch data. This area needs to be extended a lot. More comprehensive tests for Sorting and Filtering functions that the Context handles should be implemented. There should also be more unit testing for key components.
+Currently, only a couple of tests are implemented for testing the DataContext component and its capability to fetch and sort/filter data. This area needs to be extended a lot. More comprehensive tests for Sorting and Filtering functions that the Context handles should be implemented. There should also be more unit testing for key components.
 
 ### Fetching Data
 
