@@ -61,6 +61,9 @@ Currently, only a couple of tests are implemented for testing the DataContext co
 
 The Front-end only fetch the data once from the Back-end. This design decision is based on the thought that Disney will (luckily) not make that many new Star Wars movies in a hurry. So, this doesn't warrant constant information updates. Not even the ratings change that dramatically over time. So, for all intents and purposes, the data for this application is relatively static. If there is a need for a more "aggressive" fetching of data, this approach needs to be reconsidered.
 
+#### Service Worker
+Depending on the "customer" demands, I would consider using a Service Worker. This would allow us to fetch and cache the data to give the application an offline capability. 
+
 ### Back-end
 
 The Back-end is simple but still not an afterthought. Its main purpose as a **Back-end For Front-end** is to aggregate the data from different sources and cache part or all of it to speed up the initial loading of the Front-end application. There is a cache for the data collected from the SwApi while data from the OmdbApi is not cached. A discussion about a good cache strategy could be a good idea.
